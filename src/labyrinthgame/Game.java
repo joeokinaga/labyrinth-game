@@ -59,7 +59,7 @@ public class Game extends JPanel
         this.addKeyListener(new CharacterMovement());
         frameTimer = new Timer(1, new NewFrameListener());
         frameTimer.start();
-        this.dragonMoveSpeed = 10;
+        this.dragonMoveSpeed = 900;
         dragonMove = new Timer(dragonMoveSpeed, new dragonMoveListener());
         dragonMove.start();
         database = new Database(); 
@@ -184,7 +184,7 @@ public class Game extends JPanel
                     {
                         currLevel = 1;
                         startGame(currLevel);
-//                        dragonMoveSpeed = 900 - (85 * currLevel);
+                        dragonMoveSpeed = 900 - (85 * currLevel);
                         dragonMove = new Timer(dragonMoveSpeed, new dragonMoveListener());
                         dragonMove.start();
                         startGame(currLevel);
@@ -193,7 +193,7 @@ public class Game extends JPanel
                 }
                 else 
                 {
-//                    dragonMoveSpeed = 900 - (85 * currLevel);
+                    dragonMoveSpeed = 900 - (85 * currLevel);
                     dragonMove = new Timer(dragonMoveSpeed, new dragonMoveListener());
                     dragonMove.start();
                     startGame(currLevel);

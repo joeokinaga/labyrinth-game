@@ -35,7 +35,7 @@ public class PlayerVision
         
         blackTiles.subtract(new Area(brightTiles));
         
-        g2d.setColor(new Color(0, 0, 0,0));
+        g2d.setColor(new Color(0, 0, 0,255));
         g2d.fill(blackTiles);
     }
 
